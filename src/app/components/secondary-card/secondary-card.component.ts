@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CardsData } from '../../interfaces/cards-data.interface';
 
 @Component({
   selector: 'app-secondary-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './secondary-card.component.scss'
 })
 export class SecondaryCardComponent {
-
+  @Input() card: CardsData = {title: '', illustrationSrc: '', buttonLabel: '', type: '', id: ''};
 }
