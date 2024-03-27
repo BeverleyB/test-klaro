@@ -3,5 +3,5 @@ export interface CardsData {
     illustrationSrc: string
     buttonLabel: string
     type: string
-    id: number
+    id: string
   }
