@@ -1,9 +1,12 @@
 <div id="secondary-card">
 
     <div class="title">{{card.title}}</div>
-    
-    <img src={{card.illustrationSrc}} alt="Illustration">
-    
+
+    <div class="illustrationPic" [ngStyle]="{
+        'background-image' : 'url(' + card.illustrationSrc + ')', 
+        'background-size' : card.id === '4' ? '75%' : 'cover'}"
+    ></div>
+        
     <a href="" class="link">{{card.buttonLabel}}</a>
 
 </div>

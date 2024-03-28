@@ -11,19 +11,22 @@
     box-shadow: 1px 1px 2px 1px #D8DCDC;
     border-radius: 8px;
     padding: 8px;
+    margin-right: 8px;
 
     @media (min-width: $screen-md-min) { 
         width: auto;
+        margin-right: 0;
     }
 
     .title {
         font-size: 12px;
     }
 
-    img {
+    .illustrationPic {
         height: 100px;
         width: 100px;
-        object-fit: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .link {
