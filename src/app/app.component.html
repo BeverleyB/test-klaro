@@ -4,14 +4,24 @@
     <h1 class="app-title">{{title}}</h1>
   </div>
 
-  <h2 class="options">Bonjour {{name}}, voici ce que vous pouvez faire aujourd'hui!</h2>
+  <div class="container-home">
 
-  <app-primary-card *ngFor="let card of primaryCards" [card]="card"/>
+    <h2 class="options">Bonjour {{name}}, voici ce que vous pouvez faire aujourd'hui!</h2>
+    <app-primary-card *ngFor="let card of primaryCards" [card]="card"/>
+  
+    <h2 class="options">Les aides disponibles</h2>
 
-  <h2 class="options">Les aides disponibles</h2>
+    <div class="container-btn-and-cards">
 
-  <div class="container-secondary-cards">
-    <app-secondary-card *ngFor="let card of secondaryCards" [card]="card"/>
+      <div class="container-btn">
+        <div id="scroll-left" class="button-slide left" (click)="slide('left')"></div>
+        <div id="scroll-right" class="button-slide right" (click)="slide('right')"></div>
+      </div>
+
+      <div id="container-secondary-cards">
+        <app-secondary-card *ngFor="let card of secondaryCards" [card]="card"/>
+      </div>
+    </div>
   </div>
 
 </main>

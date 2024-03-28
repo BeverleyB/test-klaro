@@ -2,12 +2,6 @@
 
 #main {
     background-color: $light-blue;
-    padding: 15px 15px 50px 15px;
-
-    @media (min-width: $screen-md-min) { 
-        padding: 15px 65px 50px 80px;
-        min-height: calc(100vh - 65px);
-    }
 
     .container-title {
         height: 60px;
@@ -15,10 +9,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: -15px;
         border-radius: 0 0 8px 8px;
         box-shadow: 3px 3px 4px 2px #B2B8B9;
-        margin-bottom: 35px;
+
+        @media (min-width: $screen-md-min) { 
+            padding-left: 80px;
+            justify-content: left;
+        }
 
         .app-title {
             color: white;
@@ -26,35 +23,74 @@
         }
     }
 
-    .options {
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 16px;
+    .container-home {
+        padding: 32px 15px 53px 15px;
+        min-height: calc(100vh - 145px);
 
         @media (min-width: $screen-md-min) { 
-            font-size: 16px;
-
-            &:nth-of-type(2) {
-                margin-top: 40px;
+            padding: 32px 64px 48px 80px;
+            min-height: calc(100vh - 140px);
+        }
+        
+        .options {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 16px;
+    
+            @media (min-width: $screen-md-min) { 
+                font-size: 16px;
+    
+                &:nth-of-type(2) {
+                    margin-top: 40px;
+                }
+            }
+    
+            &:first-of-type {
+                margin-bottom: 25px;
             }
         }
 
-        &:first-of-type {
-            margin-bottom: 25px;
-        }
-    }
+        .container-btn-and-cards {
+            position: relative;
 
-    .container-secondary-cards {
-        display: flex;
-        overflow: hidden;
-        width: calc(100% + 15px);
+            .button-slide {
+                background: url('../assets/Boutons.svg') no-repeat center;
+                background-size: cover;
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                cursor: pointer;
+                top: 50%;
+                transform: translate(-50%, -50%); 
+    
+                @media (min-width: $screen-md-min) { 
+                    display: none;
+                }
+    
+                &.left {
+                    left: 5px;
+                    display: none;
+                }
+                
+                &.right {
+                    transform: scaleX(-1) translate(-50%, -50%);
+                    right: 5px;
+                }
+            }
 
-        @media (min-width: $screen-md-min) { 
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 50px;
-            width: 100%;
-            overflow: initial;
+            #container-secondary-cards {
+                display: flex;
+                overflow-x: hidden;
+                width: calc(100% + 15px);
+        
+                @media (min-width: $screen-md-min) { 
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 50px;
+                    width: 100%;
+                    overflow: initial;
+                }
+            }
         }
     }
 }
