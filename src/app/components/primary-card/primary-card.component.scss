@@ -23,11 +23,23 @@
             font-size: 14px;
         }
 
-        .link {
-            font-size: 12px;
-            color: $blue;
-            cursor: pointer;
+        .container-link {
+            display: flex;
+
+            .link {
+                font-size: 12px;
+                color: $blue;
+                cursor: pointer;
+            }
+
+            .chevron {
+                color: $blue;
+                font-weight: 100;
+                font-size: 15px;
+                margin-left: 10px;
+            }
         }
+
     }
 
     img {
